@@ -28,7 +28,7 @@ export default {
       currentUrl: "",
       imageUrl: "",
       apiUrl: "https://pokeapi.co/api/v2/pokemon",
-      pokemanUrl: "",
+      pokemonUrl: "",
       showDetail: false,
     };
   },

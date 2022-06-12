@@ -11,7 +11,6 @@
       v-if="showDetail"
       :pokemonUrl="pokemonUrl"
       :imageUrl="imageUrl"
-      @setPokemonUrl="setPokemonUrl"
       @closeDetail="closeDetail"
     />
   </div>
