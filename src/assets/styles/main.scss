@@ -1,10 +1,16 @@
-.container {
-    background-color: rgb(236, 142, 28);
+
+
+@mixin flex-display {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.container {
+    background-color: rgb(236, 142, 28);
+    @include flex-display;
 
     .searchBar {
         margin: 10px;
@@ -38,11 +44,7 @@
 }
 
 .pokemon-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+   @include flex-display;
     gap: 2rem 4rem;
     padding: 2rem;
 
@@ -62,9 +64,7 @@
 }
 
 .detail {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-display;
     flex-direction: column;
     position: fixed;
     top: 0;
@@ -74,18 +74,14 @@
     height: 100%;
 
     .detail-view {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-display;
         flex-direction: column;
         position: relative;
         width: 60%;
         background-color: antiquewhite;
 
         .image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex-display;
             flex-direction: column;
             position: absolute;
             width: 8rem;
@@ -96,10 +92,8 @@
         }
 
         .data {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            @include flex-display;
+    flex-direction: column;
             width: 100%;
 
             .ability {
@@ -123,18 +117,14 @@
 @media screen and (max-width: 600px) {
     .container {
         background-color: green;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flex-display;
+    flex-direction: column;
     
         .searchBar {
             margin: 6px;
             width: 20rem !important;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include flex-display;
+    flex-direction: column;
             
     
             input {
@@ -156,10 +146,8 @@
     }
 
     .pokemon-list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include flex-display;
+    flex-direction: column;
         gap: 2rem;
         padding: 2rem;
     

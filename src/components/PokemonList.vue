@@ -3,7 +3,7 @@
     <section
       v-for="(pokemon, index) in pokemons"
       :key="'poke' + index"
-      @click='setPokemonUrl(pokemon.url)'
+      @click='setPokemonUrl'
     >
       <img
         :src="imageUrl + pokemon.id + '.png'"
