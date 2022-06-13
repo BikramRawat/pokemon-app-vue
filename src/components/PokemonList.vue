@@ -3,13 +3,11 @@
     <section
       v-for="(pokemon, index) in pokemons"
       :key="'poke' + index"
-      @click='setPokemonUrl'
+      @click='setPokemonUrl(pokemon.url)'
     >
       <img
         :src="imageUrl + pokemon.id + '.png'"
-        width="90"
-        height="90"
-        alt="pokemon image"
+        alt="pokemon-image"
       />
       <h3>{{ pokemon.name }}</h3>
     </section>

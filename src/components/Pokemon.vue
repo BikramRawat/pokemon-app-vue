@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="pokemon-container">
     <PokemonSearch :apiUrl="apiUrl" @setPokemonUrl="setPokemonUrl" />
     <PokemonList
       :imageUrl="imageUrl"

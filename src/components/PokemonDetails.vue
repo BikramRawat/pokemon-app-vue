@@ -1,6 +1,6 @@
 <template>
   <div class="detail">
-    <div class="detail-view" v-if="showDetail">
+    <div class="detail-view" v-if="show">
       <div v-if="pokemon" class="image">
         <img :src="imageUrl + pokemon.id + '.png'" alt="" />
       </div>
@@ -16,7 +16,7 @@
         </div>
       </div>
       <h2 v-else>The pokemon was not found</h2>
-      <button class="close" @click="closeDetail()">close</button>
+      <button class="close" @click="closeDetail">close</button>
     </div>
   </div>
 </template>
@@ -26,9 +26,9 @@ export default {
   props: ["pokemonUrl", "imageUrl"],
   data: () => {
     return {
-      showDetail: false,
+      show: false,
       pokemon: {},
-    };
+    }
   },
   methods: {
     fetchData() {
@@ -39,7 +39,7 @@ export default {
         })
         .then((data) => {
           this.pokemon = data;
-          this.showDetail = true;
+          this.show = true;
         })
         .catch((error) => {
           console.log(error);

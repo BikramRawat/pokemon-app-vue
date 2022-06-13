@@ -1,5 +1,5 @@
 <template>
-  <div class="searchBar">
+  <div class="search-container">
     <div>
     <form @submit.prevent="setPokemonUrl">
       <input type="search" v-model="searchValue" />

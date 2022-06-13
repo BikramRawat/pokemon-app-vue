@@ -8,11 +8,11 @@
     flex-wrap: wrap;
 }
 
-.container {
+.pokemon-container {
     background-color: rgb(236, 142, 28);
     @include flex-display;
 
-    .searchBar {
+    .search-container {
         margin: 10px;
         display: flex;
         flex-direction: row;
@@ -93,7 +93,7 @@
 
         .data {
             @include flex-display;
-    flex-direction: column;
+            flex-direction: column;
             width: 100%;
 
             .ability {
@@ -115,12 +115,12 @@
 }
 
 @media screen and (max-width: 600px) {
-    .container {
+    .pokemon-container {
         background-color: green;
         @include flex-display;
     flex-direction: column;
     
-        .searchBar {
+        .search-container {
             margin: 6px;
             width: 20rem !important;
             @include flex-display;
