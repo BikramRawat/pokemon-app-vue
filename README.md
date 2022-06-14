@@ -4,6 +4,13 @@
 ```
 yarn install
 ```
+```
+yarn add sass-loader, yarn add sass
+```
+```
+yarn add vue-router
+```
+
 
 ### Compiles and hot-reloads for development
 ```
