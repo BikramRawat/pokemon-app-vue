@@ -77,15 +77,19 @@
         @include flex-display;
         flex-direction: column;
         position: relative;
-        width: 60%;
+        width: 40%;
         background-color: antiquewhite;
+        text-transform: capitalize;
 
         .image {
             @include flex-display;
             flex-direction: column;
             position: absolute;
-            width: 4rem;
-            height: 5rem;
+            width: 10rem;
+            height: 10rem;
+            top:2rem;
+            left: 4rem;
+           
             overflow: hidden;
         }
 
@@ -93,9 +97,11 @@
             @include flex-display;
             flex-direction: column;
             width: 100%;
+            margin-top: 1rem;
 
             .ability {
-                background-color: pink;
+            @include flex-display;
+                
             }
         }
         .close {

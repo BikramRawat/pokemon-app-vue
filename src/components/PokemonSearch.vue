@@ -6,7 +6,7 @@
     </form>
     </div>
     <div>
-    <button @click="setPokemonUrl">Search</button>
+    <button @click="setPokemonUrl()">Search</button>
     </div>
   </div>
 </template>
@@ -23,7 +23,7 @@ export default {
   methods: {
     setPokemonUrl(url) {
       if (this.searchValue !== "")
-        this.$emit("setPokemonUrl", this.apiUrl + this.searchValue);
+        this.$emit("setPokemonUrl", this.searchValue);
     },
   },
 };

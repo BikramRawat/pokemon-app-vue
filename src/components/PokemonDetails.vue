@@ -5,14 +5,15 @@
         <img :src="imageUrl + pokemon.id + '.png'" alt="" />
       </div>
       <div v-if="pokemon" class="data">
-        <h2>{{ pokemon.name }}</h2>
-        <h3>Abilities</h3>
+        <h2>{{ pokemon.name }}</h2> 
+        <div class="ability">
+          <h4>Abilities:</h4>
         <div
-          class="ability"
           v-for="(value, index) in pokemon.abilities"
           :key="'value' + index"
         >
-          {{ value.ability.name }}
+          {{ value.ability.name}}
+        </div> 
         </div>
       </div>
       <h2 v-else>The pokemon was not found</h2>
