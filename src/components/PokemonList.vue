@@ -3,7 +3,7 @@
     <section
       v-for="(pokemon, index) in pokemons"
       :key="'poke' + index"
-      @click='setPokemonUrl(pokemon.url)'
+      @click="setPokemonUrl(pokemon.url)"
     >
       <img
         :src="imageUrl + pokemon.id + '.png'"
@@ -31,9 +31,9 @@ export default {
     };
   },
 
-  components: {
-    PokemonDetails,
-  },
+  // components: {
+  //   PokemonDetails,
+  // },
 
   methods: {
     fetchData() {
@@ -58,13 +58,13 @@ export default {
           console.log(error);
         });
     },
-  },
   next() {
     this.currentUrl = this.nextUrl;
     this.fetchData();
   },
   setPokemonUrl(url) {
     this.$emit("setPokemonUrl", url);
+  },
   },
   created() {
     this.currentUrl = this.apiUrl;

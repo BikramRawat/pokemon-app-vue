@@ -45,9 +45,9 @@ export default {
           console.log(error);
         });
     },
-  },
   closeDetail() {
     this.$emit("closeDetail");
+  },
   },
   created() {
     this.fetchData();
