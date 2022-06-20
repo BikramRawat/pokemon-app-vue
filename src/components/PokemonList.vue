@@ -5,10 +5,7 @@
       :key="'poke' + index"
       @click="setPokemonUrl(pokemon.url)"
     >
-      <img
-        :src="imageUrl + pokemon.id + '.png'"
-        alt="pokemon-image"
-      />
+      <img :src="imageUrl + pokemon.id + '.png'" alt="pokemon-image" />
       <h3>{{ pokemon.name }}</h3>
     </section>
   </div>
@@ -31,9 +28,9 @@ export default {
     };
   },
 
-  // components: {
-  //   PokemonDetails,
-  // },
+  components: {
+    PokemonDetails,
+  },
 
   methods: {
     fetchData() {
@@ -58,13 +55,13 @@ export default {
           console.log(error);
         });
     },
-  next() {
-    this.currentUrl = this.nextUrl;
-    this.fetchData();
-  },
-  setPokemonUrl(url) {
-    this.$emit("setPokemonUrl", url);
-  },
+    next() {
+      this.currentUrl = this.nextUrl;
+      this.fetchData();
+    },
+    setPokemonUrl(url) {
+      this.$emit("setPokemonUrl", url);
+    },
   },
   created() {
     this.currentUrl = this.apiUrl;
