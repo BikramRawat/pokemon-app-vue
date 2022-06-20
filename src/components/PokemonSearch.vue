@@ -16,15 +16,12 @@
 </template>
 
 <script>
-// import pokemonList from "@/components/PokemonList";
-
 export default {
   props: ["apiUrl"],
   data: () => {
     return {
       input: "",
     };
-    pokemonList = [];
   },
 
   methods: {
@@ -32,13 +29,6 @@ export default {
       if (this.input !== "")
         this.$emit("setPokemonUrl", this.apiUrl + this.input.toLowerCase());
     },
-    //   computed: {
-    //   filteredList() {
-    //     return this.pokemonList.filter(pokemon => {
-    //       return pokemon.title.toLowerCase().includes(this.search.toLowerCase())
-    //     })
-    //   }
-    // },
   },
 };
 </script>

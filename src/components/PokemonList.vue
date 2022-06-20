@@ -22,7 +22,7 @@ export default {
       nextUrl: "",
       currentUrl: "",
       imageUrl: "",
-      apiUrl: "https://pokeapi.co/api/v2/pokemon",
+      apiUrl: "https://pokeapi.co/api/v2/pokemon/",
       pokemonUrl: "",
       showDetail: false,
     };
