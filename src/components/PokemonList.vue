@@ -45,7 +45,7 @@ export default {
             pokemon.id = pokemon.url
               .split("/")
               .filter(function (part) {
-                return !!part;
+                return part;
               })
               .pop();
             this.pokemons.push(pokemon);

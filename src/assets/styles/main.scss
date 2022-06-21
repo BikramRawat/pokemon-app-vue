@@ -73,7 +73,7 @@
     @include flex-display;
     flex-direction: column;
     position: relative;
-    width: 40%;
+    width: 50%;
     background-color: antiquewhite;
     text-transform: capitalize;
 
@@ -81,11 +81,10 @@
       @include flex-display;
       flex-direction: column;
       position: absolute;
-      width: 10rem;
-      height: 10rem;
-      top: 2rem;
-      left: 4rem;
-
+      width: 14rem;
+      height: 16rem;
+      top: 1rem;
+      left: 1rem;
       overflow: hidden;
     }
 
@@ -95,8 +94,9 @@
       width: 100%;
       margin-top: 1rem;
 
-      .ability {
+      .labels {
         @include flex-display;
+        margin-bottom: 8px;
       }
     }
     .close {
@@ -125,7 +125,7 @@ h2 {
     flex-direction: column;
 
     .search-container {
-      margin: 6px;
+      margin: 3px;
       width: 20rem !important;
       @include flex-display;
       flex-direction: column;
@@ -167,17 +167,17 @@ h2 {
   .detail {
     .detail-view {
       width: 70%;
-      height: 20rem;
+      height: 30rem;
 
       .image {
         width: 14rem;
         height: 16rem;
-        top: 1rem;
-        left: 2rem;
+        top: -1.5rem;
+       left:4rem !important;
       }
 
       .data {
-        .ability {
+        .labels {
           @include flex-display;
         }
       }
